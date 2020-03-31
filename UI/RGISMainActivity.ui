@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RGISMain</class>
+ <widget class="QMainWindow" name="RGISMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1308</width>
+    <height>767</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>地理信息标注系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="PlanName">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>151</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>面板列表</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listPanelID">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>151</width>
+          <height>621</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>151</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="lab_projectName">
+        <property name="text">
+         <string>大地图</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="MapImage">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>CrossCursor</cursorShape>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+        </property>
+        <property name="dragMode">
+         <enum>QGraphicsView::ScrollHandDrag</enum>
+        </property>
+        <property name="cacheMode">
+         <set>QGraphicsView::CacheNone</set>
+        </property>
+        <property name="transformationAnchor">
+         <enum>QGraphicsView::AnchorViewCenter</enum>
+        </property>
+        <property name="resizeAnchor">
+         <enum>QGraphicsView::AnchorUnderMouse</enum>
+        </property>
+        <property name="viewportUpdateMode">
+         <enum>QGraphicsView::BoundingRectViewportUpdate</enum>
+        </property>
+        <property name="rubberBandSelectionMode">
+         <enum>Qt::IntersectsItemShape</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="te_bottom_hint">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>工具箱</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>141</width>
+           <height>711</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="button_layout"/>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1308</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu66">
+    <property name="title">
+     <string>开始</string>
+    </property>
+    <addaction name="action_create_project"/>
+    <addaction name="action_history_project"/>
+   </widget>
+   <widget class="QMenu" name="menu77">
+    <property name="title">
+     <string>操作</string>
+    </property>
+    <addaction name="action_export_GPS_image"/>
+    <addaction name="action_import_GPS_image"/>
+    <addaction name="action_gd_map"/>
+   </widget>
+   <addaction name="menu66"/>
+   <addaction name="menu77"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_create_project">
+   <property name="text">
+    <string>新建项目</string>
+   </property>
+  </action>
+  <action name="action_history_project">
+   <property name="text">
+    <string>历史项目</string>
+   </property>
+  </action>
+  <action name="action_export_GPS_image">
+   <property name="text">
+    <string>导出GPS/全景图</string>
+   </property>
+   <property name="iconText">
+    <string>导出GPS/全景图</string>
+   </property>
+  </action>
+  <action name="action_import_GPS_image">
+   <property name="text">
+    <string>导入GPS/全景图</string>
+   </property>
+  </action>
+  <action name="action_import_image">
+   <property name="text">
+    <string>导入全景图</string>
+   </property>
+  </action>
+  <action name="action_gd_map">
+   <property name="text">
+    <string>高德地图显示</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
